@@ -21,7 +21,7 @@ try{ var base = window; }catch( error ){ var base = exports; }
 					zIndexList[ node.css( "z-index" ) ) ] = node;
 				}
 
-				var sortedZIndexList = _.sortBy( Object.keys( zIndexList ) );
+				var sortedZIndexList = _.sortBy( _.keys( zIndexList ) );
 
 				//Check if the first level is an inherited z-index.
 				var isInheritedZIndex = sortedZIndexList[ 0 ] == ( parentZIndex + 1 )
